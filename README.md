@@ -1,3 +1,3 @@
 ## Notas de estudos do curso SQL Impressionador (Hashtag Treinamentos)
-### Conteúdo
+### Conteúdo:
 [Introdução ao SQL](./IntroducaoSQL.md)
