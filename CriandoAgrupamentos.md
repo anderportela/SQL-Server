@@ -1,7 +1,7 @@
 # Criando Agrupamentos
 
 ## GROUP BY (Parte 1)
-- Utiliza-se GROUP BY para agrupar dados em relação às colunas.
+- Utiliza-se GROUP BY para agrupar dados em relação às colunas.  
   Exemplo:
   
       SELECT
@@ -46,8 +46,7 @@
       WHERE BrandNAme = 'Contoso' -- Filtra apenas da marca 'Contoso'
       GROUP BY ColorName -- Agrupa por nome da cor
 
-## GROUP BY em conjunto com o HAVING
-- O filtro HAVING é feito após o agrupamento (GROUP BY)
+- O filtro HAVING é feito após o agrupamento (GROUP BY)  
   Exemplo:
 
       SELECT
