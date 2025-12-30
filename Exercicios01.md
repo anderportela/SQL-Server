@@ -8,7 +8,7 @@ gestor para saber se existe alguma defasagem no controle dos produtos.
     from
     	DimProduct
 
-**Sim, existem 2517 produtos.**
+**Sim, existem 2517 produtos.**  
 
 1b) Até o mês passado, a empresa tinha um total de 19.500 clientes na base de controle.
 Verifique se esse número aumentou ou reduziu.
