@@ -1,6 +1,6 @@
     SELECT * FROM FactSales
 
-*Os exercícios abaixo estão divididos de acordo com uma determinada tabela do Banco de Dados FACTSALES*
+*Os exercícios abaixo estão divididos de acordo com uma determinada tabela do Banco de Dados FACTSALES*  
 *1. a) Faça um resumo da quantidade vendida (SalesQuantity) de acordo com o canal de vendas
 (channelKey)*
 
