@@ -4,4 +4,5 @@
 [Exercícios - Introdução ao SQL](./Exercicios01.md)  
 [Ordenando e Filtrando Dados](./OrdenandoFiltrandoDados.md)  
 [Exercicios - Ordenando e Filtrando Dados](./Exercicios02.md)  
-[Funções de Agregação](./FuncoesAgregacao.md)
+[Funções de Agregação](./FuncoesAgregacao.md)  
+[Exercícios - Funções de Agregação](./Exercicios03.md) 
