@@ -8,3 +8,4 @@
 [Exercícios - Funções de Agregação](./Exercicios03.md)   
 [Criando Agrupamentos](./CriandoAgrupamentos.md)  
 [Exercícios - Criando Agrupamentos](./Exercicios04.md)  
+[JOINs no SQL](./JOINs.md)
