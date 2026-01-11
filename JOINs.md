@@ -8,7 +8,7 @@
 - Uma **chave estrangeira** é uma coluna que permite relacionar as linhas de uma segunda tabela com a chave primária de uma primeira tabela.
 
 ## Tabela Fato vs Tabela Dimensão  
-- Uma **tabela dimensão** é uma tabela que contpem características de um determinado elemento: lojas, produtos, funcionários, clientes, etc...
+- Uma **tabela dimensão** é uma tabela que contém características de um determinado elemento: lojas, produtos, funcionários, clientes, etc...
   - Nessa tabela, nenhum dos elementos principais irá se repetir. É onde vamos encontrar nossas **chaves primárias**.  
 - Uma **tabela fato** é uma tabela que vai registrar os fatos ou acontecimentos de uma empresa/negócio em determinados períodos de tempo (venda, devoluções, aberturas de chamados, receitas, despesas, etc..)
   - Geralmente é uma tabela com milhares de informações e composta essencialmente por colunas de ID usadas para buscar as informações complementares de uma tabela dimensão, conhecidas como **chaves estrangeiras**.
