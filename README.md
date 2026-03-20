@@ -10,4 +10,4 @@
 [Exercícios - Criando Agrupamentos](./Exercicios04.md)  
 [JOINs no SQL](./JOINs.md)  
 [Exercícios - JOINs no SQL](./Exercicios05.md)
-[Exercícios - GROUP BY + JOINs](./Exercícios06.md)
+[Exercícios - GROUP BY + JOINs](./Exercicios06.md)
