@@ -46,9 +46,9 @@ quantidade total devolvida (Return Quantity) de acordo com o nome das lojas
     	CalendarMonth  -- Ordena os itens da coluna 'CalendarMonth' em ordem crescente
 
 *2. Você precisa fazer uma análise de vendas por produtos. O objetivo final é descobrir o valor
-total vendido (SalesQuantity) por produto.
+total vendido (SalesQuantity) por produto.*
 
-a) Descubra qual é a cor de produto que mais é vendida (de acordo com SalesQuantity).*
+*a) Descubra qual é a cor de produto que mais é vendida (de acordo com SalesQuantity).*
 
     SELECT TOP(20)  -- Relaciona as 20 primeiras linhas das colunas declaradas 
     	ColorName AS 'Cor',  -- Renomeia a coluna 'ColorName' para 'Cor'
@@ -206,7 +206,7 @@ consideração em sua análise apenas a marca Contoso e a cor Silver.*
 
 *10. Faça um agrupamento duplo de quantidade de produtos por BrandName e
 ProductSubcategoryName. A tabela final deverá ser ordenada de acordo com a coluna
-BrandName *
+BrandName*
 
     SELECT
     	BrandName AS 'Marca', -- Renomeia a coluna 'BrandName' para 'Marca'
