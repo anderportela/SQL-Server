@@ -50,7 +50,7 @@
       SELECT 'Nome' + 'Sobrenome'  -- Retorna 'NomeSobrenome'
       SELECT 'Nome' + ' ' + 'Sobrenome'  -- Retorna 'Nome Sobrenome'
 
-## SQL_VARIANT_PROPERTY
+## Função SQL_VARIANT_PROPERTY
 
 - Para descobrir o tipo de dado de um valor, utiliza-se a função SQL_VARIANT_PROPERTY
 
