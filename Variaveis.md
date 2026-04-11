@@ -136,11 +136,30 @@
       SET @var = 'valor'
       SELECT @var
 
-- Exemplo:
+- Exemplos:
 
       DECLARE @var INT
       SET @var = 50
       SELECT @var -- Retorna 50
+
+
+        DECLARE @numero FLOAT
+        SET @numero = 100
+        SELECT @numero
+        SELECT @numero * @numero
+        SELECT FORMAT (@numero * @numero, N)
+
+## Declarar mais de uma variável
+
+    DECLARE @var1 INT = 10,
+            @texto VARCHAR(10) = 'Teste',
+            @data DATETIME = '08/04/2026'
+    SELECT @var1, @texto, @data
+
+## Utilizando uma variável em uma consulta
+
+- Exemplo:
+   Aplique um desconto de 10% em todos os preços dos produtos. Sua consulta final deve conter as colunas 'ProductKey', 'ProductName', 'UnitPrice' e preço com desconto.
 
 
 
