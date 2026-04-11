@@ -99,7 +99,7 @@
 
       SELECT FORMAT (CAST('07/04/2026' AS DATETIME), 'dd/MMM/yyyy')  -- Retorna 07/Abr/2026
 
-      SELECT FORMAT (CAST('07/04/2026'AS DATETIME), dddd)  -- Retorna Terça-feira
+      SELECT FORMAT (CAST('07/04/2026'AS DATETIME), 'dddd')  -- Retorna Terça-feira
 
 - Por padrão, o retorno da função FORMAT é sempre um 'VARCHAR' (Texto)
  
