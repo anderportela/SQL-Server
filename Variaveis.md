@@ -81,11 +81,9 @@
 
 - Exemplos:
 
-      SELECT FORMAT (1000, N)  -- Retorna 1,000.00
-- Onde N é Número (Number)
-
-      SELECT FORMAT (1000, G)  -- Retorna 1000
-- Onde G é Geral (General)
+      SELECT FORMAT (1000, N)  -- Retorna 1,000.00 (Onde N é Número (Number))
+  
+      SELECT FORMAT (1000, G)  -- Retorna 1000 (Onde G é Geral (General)) 
 
 ### Formatações personalizadas
 
@@ -159,7 +157,89 @@
 ## Utilizando uma variável em uma consulta
 
 - Exemplo:
-   Aplique um desconto de 10% em todos os preços dos produtos. Sua consulta final deve conter as colunas 'ProductKey', 'ProductName', 'UnitPrice' e preço com desconto.
+   *Aplique um desconto de 10% em todos os preços dos produtos. Sua consulta final deve conter as colunas 'ProductKey', 'ProductName', 'UnitPrice' e preço com desconto.*
+
+        DECLARE @varDesconto FLOAT
+        SET @varDesconto = 0.10
+        SELECT 
+            ProductKey AS 'ID',
+            ProductName AS 'Produto',
+            UnitPrice AS 'Preço Unitário',
+            UnitPrice * (1 - @varDesconto) AS 'Preço Final'
+        FROM
+            DimProduct
+
+## Armazenando o resultado de um 'SELECT' em uma variável
+
+- Exemplo 1: *Crie uma variável para armazenar a quantidade total de funcionários da tabela DimEmployee:*
+
+        DECLARE @varFuncionarios INT
+        SET @varFuncionarios = (SELECT COUNT(*) FROM DimEmplyee)
+        SELECT @varFuncionarios
+
+- Exemplo 2: *Crie uma variável para armazenar a quantidade total de lojas com o status em 'Off':*
+
+         DECLARE @varLojasOff INT
+         SET @varLojasOff = (SELECT COUNT(*) FROM DimStore WHERE Status = 'Off')
+
+## PRINT - Imprimindo uma mensagem na tela
+
+- Exemplo: *Imprima na tela a quantidade de lojas com o status em 'On' e a quantidade de lojas com o status em 'Off' da tabela DimStore. Utilize variáveis:*
+
+         DECLARE @varLojasOn, @varLojasOff INT
+         SET @varLojasOn = (SELECT COUNT(*) FROM DimStore WHERE Status = 'On')
+         SET @varLojasOff = (SELECT COUNT(*) FROM DimStore WHERE Status = 'Off')
+         PRINT 'Lojas Abertas: ' + CAST (@varLojasOn AS VARCHAR(30))
+         PRINT 'Lojas Fechadas: ' + CAST (@varLojasOff AS VARCHAR(30))
+
+- Para fazer com que o número de linhas não apareça na tela de mensagens, utiliza-se o seguinte comando na primeira linha:
+
+        SET NO COUNT ON
+
+## Armazenando em uma variável um registro de uma consulta
+
+- Exemplo: *Qual o nome do produto que teve a maior quantidade vendida em uma única venda da tabela 'FactSales'?*
+
+        DECLARE @varProduto INT
+                @varQuantidade INT
+        SELECT TOP(1)
+            @varProduto = ProductKey
+            @varQuantidade = SalesQuantity
+        FROM
+            FactSales
+        ORDER BY SalesQuantity DESC
+        SELECT 
+            ProductKey,
+            ProductName
+        FROM
+            DimProduct
+        WHERE 
+            ProductKey = @varProduto
+      PRINT 'O Produto que teve a maior venda foi ' + CAST (@varProduto AS VARCHAR(50))
+
+## Acumulando valores dentro de uma variável
+
+- Exemplo: *Imprima na tela uma lista com os nomes das funcionárias do departamento de Marketing:*
+
+        DECLARE @varListaNomes VARCHAR(300)
+        SET @varListaNomes = ' '
+        SELECT
+            @varListaNomes = @varListaNomes + FirstName + ','
+        FROM
+            DimEmployee
+        WHERE
+            DepartmentName = 'Marketing' AND Gender = 'F'
+        PRINT @varListaNomes
+
+## Variáveis Globais
+
+- Para mostrar uma lista com as variáveis globais, utiliza-se o comando:
+
+        SELECT @@  
+
+  
+
+
 
 
 
