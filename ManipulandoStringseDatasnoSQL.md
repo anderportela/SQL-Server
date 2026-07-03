@@ -50,4 +50,104 @@ Exemplo 2:
             Gender AS 'Gênero (Abrev)'
       REPLACE (REPLACE(Gender, 'M', 'Masculino'), 'F', 'Feminino' AS Gênero)
 
+## TRANSLATE e STUFF
+
+- TRANSLATE: Substitui cada caractere na ordem encontrada no texto
+
+      SELECT TRANSLATE ('Argumento1', 'Argumento2', 'Argumento3')
+  - Argumento 1: Texto
+  - Argumento 2: Caracteres que deverão ser substituídos
+  - Argumento 3: Caractreres novos (mesma sequência dos caracteres antigos)
+
+- STUFF: Substitui qualquer texto com uma quantidade de caracteres limitados por um outro texto
+
+      SELECT STUFF ('Argumento1', 'Argumento2', 'Argumento3', 'Argumento4')
+  - Argumento 1: Texto
+  - Argumento 2: Posição do primeiro caractere a ser substituído
+  - Argumento 3: Quantidade de caracteres a serem substituídos
+  - Argumento 4: Novo texto
+
+## UPER e LOWER
+
+- UPPER: Transforma um texto em maiúscula
+- LOWER: Transforma um texto em minúscula
+
+## FORMAT
+
+- Formata um valor de acordo com uma formatação
+
+      SELECT FORMAT ('Argumento1', 'Argumento2')
+  - Argumento 1: Valor a ser formatado
+  - Argumento 2: Tipo de formato
+ 
+  - Tipos comuns de formatos
+    - G: Geral (General)
+    - N: Número (Number)
+    - C: Moeda (Currency)
+
+- É possível criar um terceiro 'argumento' para indicar o idioma da formatação.
+Exemplo:
+
+      SELECT FORMAT (CAST('20/05/2019' AS DATETIME) 'dd/MMMM/yy', 'en-US')
+  - en-US: Inglês (EUA)
+  - O comando irá retornar: 20/MAY/19
+
+### Formatação personalizada
+
+- Exemplo:
+
+      SELECT FORMAT (123456, '## - ## - ##')
+  - O comando irá retornar: '12 - 34 - 56'
+
+## CHARINDEX e SUBSTRING
+
+- CHARINDEX: Descobre a posição de um determinado caractere dentro um texto
+- SUBSTRING: Extrai alguns caracteres de dentro de um texto
+
+      SELECT CHARINDEX ('Argumento1', 'Argumento2')
+  - Argumento 1: Caractere ou conjunto de caracteres desejado
+  - Argumento 2: O texto onde será feita a consulta
+
+          SELECT SUBSTRING ('Argumento1', 'Argumento2', 'Argumento3')
+      - Argumento 1: O texto em que será extraído
+      - Argumento 2: A posição inicial do texto que será extraído
+      - Argumento 3: A quantidade de caracteres a partir do primeiro caractere do texto a ser extraído
+
+- Exemplo:
+  - Combine as funções CHARINDEX e SUBSTRING para extrair de forma automática qualquer sobrenome
+ 
+        SELECT SUBSTRING ('Raquel Moreno', CHARINDEX (' ', 'Raquel Moreno') +1, 100)
+
+## TRIM, LTRIM e RTRIM
+
+TRIM: Retira espaços adicionais à esquerda e à direita do texto
+LTRIM: Retira espaços adicionais à esquerda do texto
+RTRIM: Retira espaços adicionais à direita do texto
+
+- Utilizaremos os comandos no código ' ABC123 '
+
+      DECLARE @varCodigo VARCHAR (50)
+      SET @varCodigo = ' ABC123 '
+      SELECT
+
+        TRIM (@varCodigo) AS 'Trim'
+  - Retorna 'ABC123' na coluna 'Trim'
+ 
+            LTRIM (@varCodigo) AS 'Ltrim'
+  - Retorna 'ABC123 ' na coluna 'Ltrim'
+ 
+            RTRIM (@varCodigo) AS 'Rtrim'
+  - Retorna ' ABC123' na coluna 'Rtrim'
+ 
+ 
+
+
+
+  
+
+
+  
+
+
+
 
