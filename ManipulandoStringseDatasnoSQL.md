@@ -139,7 +139,29 @@ RTRIM: Retira espaços adicionais à direita do texto
             RTRIM (@varCodigo) AS 'Rtrim'
   - Retorna ' ABC123' na coluna 'Rtrim'
  
- 
+ ## DAY, MONTH, YEAR e DATEFROMPARTS
+
+ - Exemplo 1: Utilize a funçao DATEFROMPARTS para obter uma data a partir das informações de dia, mês e ano.
+
+            DECLARE @varData DATETIME
+            SET @varData = '03/07/2026'
+            SELECT
+                  DAY (@varData) AS 'Dia',
+                  MONTH (@varData) AS 'Mês',
+                  YEAR (@varData) AS 'Ano'
+
+- Exemplo 2: Utilize a funçao DATEFROMPARTS para obter uma data a partir das informações de dia, mês e ano.
+
+            DECLARE @varDia INT, @varMes INT, @varAno INT
+            SET @varDia = 03
+            SET @varMes = 07
+            SET @varAno = 2026
+            SELECT
+                  DATEFROMPARTS (@VvarAno, @varMes, @varDia)
+
+
+      
+      
 
 
 
