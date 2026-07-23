@@ -13,4 +13,5 @@
 [Exercícios - GROUP BY + JOINs](./Exercicios06.md)   
 [Variáveis](./Variaveis.md)   
 [Exercícios - Variáveis](./Exercicios07.md)   
-[Manipulando Strings e Datas no SQL](./ManipulandoStringseDatasnoSQL.md )
+[Manipulando Strings e Datas no SQL](./ManipulandoStringseDatasnoSQL.md )   
+[Exercícios - Manipulando Strings e Datas no SQL](./Exercicios08.md)
