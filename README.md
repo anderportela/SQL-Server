@@ -9,7 +9,7 @@
 [Criando Agrupamentos](./CriandoAgrupamentos.md)  
 [Exercícios - Criando Agrupamentos](./Exercicios04.md)  
 [JOINs no SQL](./JOINs.md)  
-[Exercícios - JOINs no SQL](./Exercicios05.md)   
+[Exercícios - JOINs no SQL](./Exercicios05.md)     
 [Exercícios - GROUP BY + JOINs](./Exercicios06.md)   
 [Variáveis](./Variaveis.md)   
 [Exercícios - Variáveis](./Exercicios07.md)   
